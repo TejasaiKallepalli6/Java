@@ -1,7 +1,5 @@
-package testCollections;
+package collections;
 
-import collections.RemoveLowGPAStudents;
-import collections.Student;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;

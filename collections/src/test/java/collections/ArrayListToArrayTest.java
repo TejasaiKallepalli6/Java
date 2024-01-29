@@ -1,9 +1,7 @@
-package testCollections;
+package collections;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-import collections.ArrayListToArray;
 import org.junit.Assert;
 import org.junit.Test;
 public class ArrayListToArrayTest {

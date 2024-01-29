@@ -1,5 +1,4 @@
-package testCollections;
-import collections.Removing;
+package collections;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
