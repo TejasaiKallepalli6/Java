@@ -6,7 +6,7 @@ public class convertStringToInt {
             try {
                 int result = convertToInt(input);
             } catch (NumberFormatException e) {
-                System.out.println("Exception occurred: " + e.getMessage());
+                System.out.println("Exception occurred: " + e);
             }
         }
 
