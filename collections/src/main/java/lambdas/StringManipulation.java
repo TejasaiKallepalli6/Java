@@ -1,15 +1,22 @@
 package lambdas;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class StringManipulation {
-    public static void main(String[] args) {
-        String[] strings = {"teja", "sai", "trinadh", "venkat", "siva"};
+    static List<String> stringConversion(String[] strings){
+        if(strings.length==0)
+            return null;
+
 
         // Capitalize the first letter of each string
-        Arrays.stream(strings)
+        return Arrays.stream(strings)
                 .map(s -> Character.toUpperCase(s.charAt(0)) + s.substring(1))
                 .sorted()
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+
+
     }
 }
