@@ -1,31 +1,32 @@
 package additionalcodes;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public class repeatDigits {
-    public static int[] repeatDigits(int number)
-    {
-        int j=0;
-        int [] array = new int[11];
-        while(number!=0)
-        { int digit = number%10;
-            array[j]=digit;
-            number=number/10;
-            j++;
+    public static ArrayList<Integer> repeatDigits(int number) {
+        HashMap<Integer, Integer> repeatDigits = new HashMap<>();
+        int count;
+        while (number != 0) {
+            count = 1;
+            int digit = number % 10;
+            if (repeatDigits.containsKey(digit)) {
+                repeatDigits.put(digit, count + 1);
+            } else repeatDigits.put(digit, count);
 
+            number = number / 10;
 
-        }
-        int [] result = new int[j];
-        for(int i=0;i<= array.length;i++)
-        {
-            for(int k=i+1;k<=array.length;k++)
-            {
-                if(array[i]==array[k])
-                {
-                    result[i]=array[k];
-                }
+        }ArrayList<Integer> result=new ArrayList<>();
+        for (Map.Entry<Integer,Integer> mapentry : repeatDigits.entrySet()){
+            if (mapentry.getValue() > 1) {
+
+                result.add(mapentry.getKey());
             }
         }
         return result;
 
-
     }
+
+
 }
